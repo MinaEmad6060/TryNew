@@ -11,7 +11,8 @@ import SwiftUI
 struct TryNewApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabBarView()
+                .ignoresSafeArea()
         }
     }
 }

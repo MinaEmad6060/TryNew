@@ -91,9 +91,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = C09EF6062DEDDE9600446170;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C09EF6102DEDDE9700446170 /* Products */;
 			projectDirPath = "";
