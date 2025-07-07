@@ -1,0 +1,15 @@
+{
+  "originHash" : "80588e0a52f3646c875f0e2165bafb0a90c36f1b762d3feab63b62b26f2a0176",
+  "pins" : [
+    {
+      "identity" : "navigationkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MinaEmad6060/NavigationKit",
+      "state" : {
+        "revision" : "ffc7617cdd4bd3148cf78ee7ec9871b93c7c95c5",
+        "version" : "1.0.5"
+      }
+    }
+  ],
+  "version" : 3
+}
