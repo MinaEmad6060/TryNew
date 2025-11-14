@@ -11,7 +11,19 @@ import SwiftUI
 struct TryNewApp: App {
     var body: some Scene {
         WindowGroup {
-            TryNewTabBarView()
+//            TryNewTabBarView()
+            Text("Hello, World!")
+                .onAppear {
+                    print("\(prepheryFuncTest(name: "name"))")
+                }
         }
+    }
+    
+    var prepheryTitleTest: String {
+        ""
+    }
+    
+    func prepheryFuncTest(name: String) -> String {
+        "seoseoseo"
     }
 }

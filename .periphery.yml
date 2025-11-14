@@ -1,0 +1,10 @@
+project: TryNew.xcodeproj
+schemes:
+  - TryNew
+clean_build: true
+write_results: /Users/mina.emad/Desktop/imp/Prephery/Prephery.txt
+verbose: true
+build_arguments:
+  - -destination
+  - "platform=iOS Simulator,name=iPhone 16,OS=18.5"
+

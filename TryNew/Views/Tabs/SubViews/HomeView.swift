@@ -14,9 +14,8 @@ struct HomeView: View {
     var body: some View {
         VStack {
             Text("Hello, Home!")
-            Button("Push to More") {
-                print("HomeView-navigationController", navigationController)
-                MoreView(navigationController: navigationController)
+            Button("Push to Strategy") {
+                MainStrategyView(navigationController: navigationController)
                     .push(with: navigationController)
             }
             .padding()
