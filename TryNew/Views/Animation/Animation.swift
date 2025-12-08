@@ -28,7 +28,7 @@ struct AnimationView: View {
 
 // Step 1: Create a custom AnimatableModifier
 // This allows you to apply the animation to any view and its animatable properties.
-struct FancyAnimationModifier: AnimatableModifier {
+struct FancyAnimationModifier: @preconcurrency AnimatableModifier {
     var progress: CGFloat
 
     // The animatableData is the key part. SwiftUI will automatically

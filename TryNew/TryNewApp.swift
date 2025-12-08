@@ -11,11 +11,13 @@ import SwiftUI
 struct TryNewApp: App {
     var body: some Scene {
         WindowGroup {
+            ScrollViewBackgroundExample()
+//            FlashUpdatedRegionsExample()
 //            TryNewTabBarView()
-            Text("Hello, World!")
-                .onAppear {
-                    print("\(prepheryFuncTest(name: "name"))")
-                }
+//            Text("Hello, World!")
+//                .onAppear {
+//                    print("\(prepheryFuncTest(name: "name"))")
+//                }
         }
     }
     

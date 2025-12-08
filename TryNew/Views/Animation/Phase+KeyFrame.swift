@@ -105,7 +105,7 @@ struct PhaseAnimatorTriggerExample: View {
 //}
 
 // MARK: - Custom Shake Modifier
-struct Shake: ViewModifier, Animatable {
+struct Shake: ViewModifier, @preconcurrency Animatable {
     var numberOfShakes: Double
     
     var animatableData: Double {
@@ -167,7 +167,7 @@ struct ShakeSample: View {
 
 
 // MARK: - ShakeData struct for complex animations
-struct ShakeData: Equatable, Animatable {
+struct ShakeData: Equatable, @preconcurrency Animatable {
     var offset: CGFloat = 0
     var rotation: Angle = .zero
     

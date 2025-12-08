@@ -21,7 +21,7 @@ struct MoreView: View {
             Text("Hello, More!")
             Button("Push to Last") {
                 if let navigationController = navigationController {
-                    print("MoreView-navigationController", self.navigationController)
+                    print("MoreView-navigationController", self.navigationController as Any)
                     LastPushedView(navigationController: navigationController)
                         .push(with: navigationController, animated: true)
                 }

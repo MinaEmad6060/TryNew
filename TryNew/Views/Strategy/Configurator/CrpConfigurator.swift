@@ -5,6 +5,7 @@
 //  Created by Mina Emad on 12/07/2025.
 //
 
+@MainActor
 final class CrpConfigurator: ConfiguratorProtocol {
     
     var pageTitle: String = "CRP Title"
@@ -16,7 +17,11 @@ final class CrpConfigurator: ConfiguratorProtocol {
     var buttonAction: () -> Void = { }
     
     init() {
-        buttonAction = { self.showNativeAlert(title: "CRP Note", message: "You should mark this shipment to CRP", mainAction: "Sure") }
+        buttonAction = {
+            Task { @MainActor in
+                self.showNativeAlert(title: "CRP Note", message: "You should mark this shipment to CRP", mainAction: "Sure")
+            }
+        }
     }
    
 

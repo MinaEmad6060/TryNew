@@ -38,7 +38,7 @@ extension View {
 }
 
 struct SizeKey: PreferenceKey {
-    static var defaultValue: [CGSize] = []
+    static let defaultValue: [CGSize] = []
     static func reduce(value: inout [CGSize], nextValue: () -> [CGSize]) {
         value.append(contentsOf: nextValue())
     }

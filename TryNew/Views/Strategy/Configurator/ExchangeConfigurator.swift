@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 final class ExchangeConfigurator: ConfiguratorProtocol {
     
     var pageTitle: String = "Exchange Title"
@@ -18,7 +19,11 @@ final class ExchangeConfigurator: ConfiguratorProtocol {
     var buttonAction: () -> Void = { }
     
     init() {
-        buttonAction = { self.showNativeAlert(title: "Exchange Note", message: "You should exchange your shipment", mainAction: "OK") }
+        buttonAction = {
+            Task { @MainActor in
+                self.showNativeAlert(title: "Exchange Note", message: "You should exchange your shipment", mainAction: "OK")
+            }
+        }
     }
    
 }

@@ -5,6 +5,7 @@
 //  Created by Mina Emad on 12/07/2025.
 //
 
+@MainActor
 final class DeliverConfigurator: ConfiguratorProtocol {
     
     var pageTitle: String = "Deliver Title"
@@ -16,7 +17,11 @@ final class DeliverConfigurator: ConfiguratorProtocol {
     var buttonAction: () -> Void = { }
     
     init() {
-        buttonAction = { self.showNativeAlert(title: "Deliver Note", message: "You should Deliver this shipment as quick as possible", mainAction: "Yes, for sure") }
+        buttonAction = {
+            Task { @MainActor in
+                self.showNativeAlert(title: "Deliver Note", message: "You should Deliver this shipment as quick as possible", mainAction: "Yes, for sure")
+            }
+        }
     }
    
 

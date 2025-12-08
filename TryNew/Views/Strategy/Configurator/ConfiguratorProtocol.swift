@@ -7,6 +7,7 @@
 
 import UIKit
 
+@MainActor
 protocol ConfiguratorProtocol {
     var pageTitle: String { get }
     var pageSubTitle: String? { get }
@@ -25,6 +26,7 @@ extension ConfiguratorProtocol {
     
 extension ConfiguratorProtocol {
     
+    @MainActor
     func showNativeAlert(
         title: String,
         message: String,
