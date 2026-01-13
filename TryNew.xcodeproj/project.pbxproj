@@ -37,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C0048EDB2E848579005531A3 /* TryNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryNewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C03633892E22B45E0093BCFD /* TryNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0048EDB2E848579005531A3 /* TryNewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TryNewTests.xctest; path = "/Users/mina.emad/Desktop/TryNew/build/Debug-iphoneos/TryNew.app/PlugIns/TryNewTests.xctest"; sourceTree = "<absolute>"; };
+		C03633892E22B45E0093BCFD /* TryNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TryNew.app; path = /Users/mina.emad/Desktop/TryNew/build/Debug/TryNew.app; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -77,8 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				C09EF6112DEDDE9700446170 /* TryNew */,
-				C03633892E22B45E0093BCFD /* TryNew.app */,
-				C0048EDB2E848579005531A3 /* TryNewTests.xctest */,
 				C0048EDC2E848579005531A3 /* TryNewTests */,
 			);
 			sourceTree = "<group>";
