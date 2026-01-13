@@ -16,28 +16,28 @@ struct MainStrategyView: View {
     }
     
     var body: some View {
-        VStack(spacing: 24) {
+        VStack(spacing: 48) {
             Text("Try Strategy")
-                .font(.title2)
+                .font(.title3)
                 .fontWeight(.bold)
                 .padding(.top, 20)
             
-            createButton(title: "Exchange", color: .blue) {
+            createButton(title: "Exchange") {
                 TargetStrategyView(configuration: ExchangeConfigurator())
                     .push(with: navigationController)
             }
             
-            createButton(title: "Deliver", color: .green) {
+            createButton(title: "Deliver") {
                 TargetStrategyView(configuration: DeliverConfigurator())
                     .push(with: navigationController)
             }
             
-            createButton(title: "CRP", color: .orange) {
+            createButton(title: "CRP") {
                 TargetStrategyView(configuration: CrpConfigurator())
                     .push(with: navigationController)
             }
             
-            createButton(title: "Back", color: .gray) {
+            createButton(title: "Back") {
                 self.dismiss()
             }
             
@@ -45,16 +45,15 @@ struct MainStrategyView: View {
         .padding()
     }
     
-    private func createButton(title: String, color: Color, action: @escaping () -> Void) -> some View {
+    private func createButton(title: String, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(title)
-                .fontWeight(.semibold)
+                .fontWeight(.bold)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
-                .background(color)
+                .background(Color.blue)
                 .cornerRadius(12)
-                .shadow(color: color.opacity(0.3), radius: 5, x: 0, y: 3)
         }
     }
 }
