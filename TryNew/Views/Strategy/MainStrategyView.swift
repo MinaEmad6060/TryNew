@@ -16,28 +16,28 @@ struct MainStrategyView: View {
     }
     
     var body: some View {
-        VStack(spacing: 48) {
+        VStack(spacing: 24) {
             Text("Try Strategy")
-                .font(.title3)
+                .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top, 20)
             
-            createButton(title: "Exchange") {
+            createButton(title: "Exchange", color: .blue) {
                 TargetStrategyView(configuration: ExchangeConfigurator())
                     .push(with: navigationController)
             }
             
-            createButton(title: "Deliver") {
+            createButton(title: "Deliver", color: .green) {
                 TargetStrategyView(configuration: DeliverConfigurator())
                     .push(with: navigationController)
             }
             
-            createButton(title: "CRP") {
+            createButton(title: "CRP", color: .orange) {
                 TargetStrategyView(configuration: CrpConfigurator())
                     .push(with: navigationController)
             }
             
-            createButton(title: "Back") {
+            createButton(title: "Back", color: .gray) {
                 self.dismiss()
             }
             
@@ -45,15 +45,16 @@ struct MainStrategyView: View {
         .padding()
     }
     
-    private func createButton(title: String, action: @escaping () -> Void) -> some View {
+    private func createButton(title: String, color: Color, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(title)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.blue)
-                .cornerRadius(10)
+                .padding(.vertical, 16)
+                .background(color)
+                .cornerRadius(12)
+                .shadow(color: color.opacity(0.3), radius: 5, x: 0, y: 3)
         }
     }
 }
