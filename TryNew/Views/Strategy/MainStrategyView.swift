@@ -20,7 +20,6 @@ struct MainStrategyView: View {
             Text("Try Strategy")
                 .font(.title3)
                 .fontWeight(.bold)
-                .padding(.top, 20)
             
             createButton(title: "Exchange") {
                 TargetStrategyView(configuration: ExchangeConfigurator())
@@ -42,18 +41,12 @@ struct MainStrategyView: View {
             }
             
         }
-        .padding()
     }
     
     private func createButton(title: String, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(title)
                 .fontWeight(.bold)
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.blue)
-                .cornerRadius(10)
         }
     }
 }
