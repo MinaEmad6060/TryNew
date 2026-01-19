@@ -51,9 +51,9 @@ struct MainStrategyView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
-                .padding()
+                .padding(.vertical, 16)
                 .background(Color.blue)
-                .cornerRadius(10)
+                .cornerRadius(12)
         }
     }
 }
